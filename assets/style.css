@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+
+h1.header{
+    background-color: rgb(7, 54, 6); 
+    padding: 10px;
+    border-bottom: 2px solid lawngreen;
+}
+
+body {
+    background-color: rgb(27, 31, 28);
+    text-align: center;
+    color:rgb(71, 158, 31);
+}
+
+article.mainBody{
+    max-width: 800px;
+    margin: 5px;
+    padding: 5px;
+    border: 5px dotted rgb(7, 54, 6); 
+    border-radius: 10px;
+    margin: auto;
+}
