@@ -8,7 +8,7 @@ slider.oninput = function() {
   output.innerHTML = this.value;
 }
 
-
+// Document Variables
 const resultEl = document.getElementById('result');
 const lengthEl = document.getElementById('lengthRange');
 const uppercaseEl = document.getElementById('upperCase');
@@ -25,6 +25,7 @@ const randomFunc = {
 	symbol: getRandomSymbol
 }
 
+// Copy Password Function
 clipboard.addEventListener('click', () => {
 	const textarea = document.createElement('textarea');
 	const password = resultEl.innerText;
@@ -39,6 +40,7 @@ clipboard.addEventListener('click', () => {
 	alert('Password copied to clipboard');
 });
 
+// Settings Functions
 generate.addEventListener('click', () => {
 	const length = +lengthEl.value;
 	const hasLower = lowercaseEl.checked;
@@ -49,17 +51,18 @@ generate.addEventListener('click', () => {
 	resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
 });
 
+// Password Generation Function
 function generatePassword(lower, upper, number, symbol, length) {
 	let generatedPassword = '';
 	const typesCount = lower + upper + number + symbol;
 	const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
 	
-	// Doesn't have a selected type
+	// Stop if no settings are marked
 	if(typesCount === 0) {
 		return '';
 	}
 	
-	// create a loop
+	// Call a random character function and add it to the final password until the limit is reached
 	for(let i=0; i<length; i+=typesCount) {
 		typesArr.forEach(type => {
 			const funcName = Object.keys(type)[0];
@@ -72,6 +75,7 @@ function generatePassword(lower, upper, number, symbol, length) {
 	return finalPassword;
 }
 
+// Random character generation
 function getRandomLower() {
 	return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }

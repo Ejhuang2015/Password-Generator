@@ -12,6 +12,7 @@ Thanks to the following people who have contributed to this project:
 
 * [Scott Byer](https://github.com/switch120) 
 * [Mike Fearly](https://michaelfearnley.com/)
+* [Traversy Media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA)
 * UNH Full Stack Development Bootcamp
 
 ## Contact
