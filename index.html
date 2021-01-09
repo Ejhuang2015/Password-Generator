@@ -8,6 +8,8 @@
         
         <!-- Stylesheet Links -->
           <!-- Fonts -->
+          <link rel="preconnect" href="https://fonts.gstatic.com">
+          <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 
           <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -37,7 +39,7 @@
           <section class="col-md-4">
 
             <div class="card">
-              <h3 class="card-title">Pick character type(s)</h3>
+              <h3 class="card-title">Character type(s)</h3>
 
               <div class="card-text">
 
@@ -50,7 +52,7 @@
                     <!-- Uppercase Setting -->
                     <article class="setting">
                       <label>Uppercase</label>
-                      <input type="checkbox"id="upperCase" checked/>
+                      <input type="checkbox" id="upperCase" checked/>
                     </article>
 
                   </section>
@@ -105,13 +107,14 @@
           <section class="col-md-4">
 
             <div class="card">
-              <h3 class="card-title">Choose Password Length</h3>
+              <h3 class="card-title">Password Length</h3>
 
               <div class="card-text">
 
                 <!-- Length Setting -->
-                <article class="setting">
+                <article class="setting lengthSetting">
                   <label>Length: <span id="lengthValue"></span></label>
+                  <br>
                   <input type="range" min="8" max="128" value="20" class="slider" id="lengthRange" />
                 </article>
 
